@@ -1,0 +1,197 @@
+body {
+  font-family: "Epilogue", sans-serif;
+  margin: 0;
+}
+
+main .desktop {
+  display: none;
+}
+main .overlay {
+  display: block;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 41%);
+  transition: right 0.3s ease-in-out;
+}
+.overlay .overlay-content {
+  padding: 0 1.25rem 1.25rem 1.25rem;
+}
+.overlay p {
+  padding-right: 0.75rem;
+}
+.overlay .dropdown {
+  padding: 0 1.5rem;
+}
+.overlay #close-button {
+  padding: 1rem;
+  display: block;
+  margin-left: auto;
+}
+
+.features {
+  text-transform: capitalize;
+}
+.features .dropdown {
+  display: none;
+}
+.features #arrow-up {
+  display: none;
+}
+.features .fets {
+  padding-top: 1rem;
+  display: flex;
+}
+.features .fets .som {
+  padding-right: 0.5rem;
+}
+.features .fets img {
+  align-self: center;
+}
+.features .dropdown li {
+  padding: 0.5rem 0;
+}
+.features #todo {
+  list-style-image: url(/images/icon-todo.svg);
+}
+.features #calendar {
+  list-style-image: url(/images/icon-calendar.svg);
+}
+.features #reminders {
+  list-style-image: url(/images/icon-reminders.svg);
+}
+.features #planning {
+  list-style-image: url(/images/icon-planning.svg);
+}
+
+.company .dropdown {
+  display: none;
+}
+.company #arrow-up {
+  display: none;
+}
+.company .fets {
+  padding-top: 1rem;
+  display: flex;
+}
+.company .fets .som {
+  padding-right: 0.5rem;
+}
+.company .fets img {
+  align-self: center;
+}
+.company .dropdown li {
+  list-style: none;
+  padding: 0.5rem 0.5rem;
+}
+
+.info .links {
+  padding-top: 1rem;
+}
+.info .links a, .info .links a:visited {
+  color: hsl(0, 0%, 41%);
+  text-decoration: none;
+}
+
+.misc {
+  padding-top: 2rem;
+}
+.misc a, .misc a:visited {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+}
+.misc .login {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.misc .register {
+  width: 100%;
+  text-align: center;
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 10px;
+}
+.misc .register a {
+  padding: 0.5rem;
+}
+
+.header .mobile {
+  width: 100%;
+}
+.header .nav-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+}
+.header .nav-bar .menu {
+  margin-left: auto;
+}
+
+.ad h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin-bottom: 0;
+}
+.ad p {
+  color: hsl(0, 0%, 41%);
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+.ad .learn-more {
+  background-color: hsl(0, 0%, 8%);
+  margin: 1rem auto 2rem auto;
+  padding: 1rem;
+  width: 30%;
+  border-radius: 10px;
+  text-align: center;
+  color: hsl(0, 0%, 98%);
+  font-size: 1rem;
+}
+
+.icons {
+  padding: 1rem 0.5rem 7rem 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.icons img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.opened .content {
+  transition: 1s;
+  background-color: hsla(0, 0%, 8%, 0.7);
+}
+.opened .overlay {
+  right: 0px;
+}
+
+.expanded {
+  transition: 1s;
+}
+.expanded #arrow-up {
+  display: block;
+  transition: 0.5s;
+}
+.expanded #arrow-down {
+  display: none;
+  display: 0.5s;
+}
+.expanded .dropdown {
+  padding-top: 1rem;
+  display: block;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}/*# sourceMappingURL=main.css.map */

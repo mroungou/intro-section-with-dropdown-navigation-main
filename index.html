@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/css/main.css">
+  <script src="./index.js"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
@@ -11,25 +15,84 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
-
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
+<main>
+<div class="page" id="page">
+  <div class="mobile overlay" id="overlay">
+    <div class="overlay-nav">
+      <img src="./images/icon-close-menu.svg" id="close-button" alt="">
+    </div>
+    <div class="overlay-content">
+      <div class="links">
+        <div class="nav">
+          <div class="features"  id="features-dropdown">
+            <div class="fets" id="features">
+              <div class="som">Features</div>
+              <img src="./images/icon-arrow-up.svg" id="arrow-up" alt="">
+              <img src="./images/icon-arrow-down.svg" id="arrow-down" alt="">
+            </div>
+              <div class="dropdown">
+                <li id="todo">todo list</li>
+                <li id="calendar">calendar</li>
+                <li id="reminders">reminders</li>
+                <li id="planning">planning</li>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="company" id="company-dropdown">
+        <div class="nav">
+          <div class="fets" id="company">
+            <div class="som">Company</div>
+            <img src="./images/icon-arrow-up.svg" id="arrow-up" alt="">
+            <img src="./images/icon-arrow-down.svg" id="arrow-down" alt="">
+          </div>
+          <div class="dropdown">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <div class="links"><a href="#careers">Careers</a></div>
+        <div class="links"><a href="#about">About</a></div>
+      </div>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      <div class="misc">
+        <div class="login"><a href="#login">Login</a></div>
+        <div class="register"><a href="#register">Register</a></div>
+      </div>
+    </div>
   </div>
+    <div class="content">
+      <div class="header">
+        <div class="nav-bar">
+          <img src="./images/logo.svg" class="logo" alt="">
+          <img src="./images/icon-menu.svg" class="menu" id="menu" alt="">
+        </div>
+        <div class="background-mobile">
+          <img src="./images/image-hero-mobile.png" class="mobile " alt="">
+        </div>
+        <div class="background-desktop">
+          <img src="./images/image-hero-desktop.png" class="desktop" alt="">
+        </div>
+      </div>
+        <div class="ad">
+          <h1>Make remote work</h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline processes,
+            create team rituals, and watch productivity soar.
+          </p>
+          <div class="learn-more">Learn more</div>
+          <div class="icons">
+            <div class="data-biz"><img src="./images/client-databiz.svg" alt=""></div>
+            <div class="audiophile"><img src="./images/client-audiophile.svg" alt=""></div>
+            <div class="meet"><img src="./images/client-meet.svg" alt=""></div>
+            <div class="maker"><img src="./images/client-maker.svg" alt=""></div>
+          </div>
+        </div>
+    </div>
+</div>
+</main>
 </body>
 </html>

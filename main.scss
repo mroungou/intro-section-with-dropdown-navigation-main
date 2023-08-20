@@ -1,0 +1,215 @@
+// colors
+$almostWhite: hsl(0, 0%, 98%);
+$mediumGray: hsl(0, 0%, 41%);
+$almostBlack: hsl(0, 0%, 8%);
+
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    margin: 0;
+}
+
+main {
+    .desktop{
+        display: none;
+    }
+    .overlay {
+        display: block;
+    }
+}
+
+@mixin dropMenu {
+    padding-top: 1rem;
+    display: flex;
+    img {
+        align-self: center;
+    }
+}
+
+.overlay {
+    .overlay-content {
+        padding: 0 1.25rem 1.25rem 1.25rem;
+    }
+    p {
+        padding-right: 0.75rem;
+    }
+    .dropdown {
+        padding: 0 1.5rem;
+    }
+    #close-button {
+        padding: 1rem;
+        display: block;
+        margin-left: auto;
+    }
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: $almostWhite;
+    color: $mediumGray;
+    transition: right 0.3s ease-in-out;
+}
+
+.features {
+    .dropdown {
+        display: none;
+    }
+    #arrow-up {
+        display: none;
+    }
+    .fets {
+        .som {
+            padding-right: .5rem;
+        }
+        @include dropMenu()
+    }
+    .dropdown li{
+        padding: 0.5rem 0;
+    }
+    text-transform: capitalize;
+    #todo {
+        list-style-image: url(/images/icon-todo.svg);
+    }
+    #calendar {
+        list-style-image: url(/images/icon-calendar.svg);
+    }
+    #reminders {
+        list-style-image: url(/images/icon-reminders.svg);
+    }
+    #planning {
+        list-style-image: url(/images/icon-planning.svg);
+    }
+}
+
+.company {
+    .dropdown {
+        display: none
+    }
+    #arrow-up {
+        display: none
+    }
+    .fets {
+        .som {
+            padding-right: .5rem;
+        }
+        @include dropMenu();
+    }
+    .dropdown li {
+        list-style: none;
+        padding: 0.5rem .5rem;
+    }
+}
+.info {
+    .links {
+        padding-top: 1rem;
+        a, a:visited {
+            color: $mediumGray;
+            text-decoration: none;
+        }
+    }
+}
+
+.misc {
+    padding-top: 2rem;
+    a, a:visited {
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+        text-decoration: none;
+        color: $mediumGray;
+    }
+    .login {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .register {
+        width: 100%;
+        text-align: center;
+        border: 2px solid $mediumGray;
+        border-radius: 10px;
+        a {
+            padding: 0.5rem;
+        }
+    }
+}
+
+
+.header {
+    .mobile {
+        width: 100%;
+    }
+    .nav-bar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+        .menu {
+            margin-left: auto;
+        }
+    }
+}
+
+.ad {
+    h1 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.25rem;
+        margin-bottom: 0;
+    }
+    p {
+        color: $mediumGray;
+        text-align: center;
+        padding: 1rem;
+        margin: 0;
+        line-height: 1.5;
+    }
+    .learn-more {
+        background-color: $almostBlack;
+        margin: 1rem auto 2rem auto;
+        padding: 1rem;
+        width: 30%;
+        border-radius: 10px;
+        text-align: center;
+        color: $almostWhite;
+        font-size: 1rem;
+    }
+}
+
+.icons {
+    padding: 1rem 0.5rem 7rem 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+.opened {
+    .content {
+        transition: 1s;
+        background-color: hsla(0, 0%, 8%, 0.7);
+    }
+    .overlay {
+        right: 0px;
+    }
+}
+
+.expanded {
+    transition: 1s;
+    #arrow-up {
+        display: block;
+        transition: .5s;
+    }
+    #arrow-down {
+        display: none;
+        display: .5s;
+    }
+    .dropdown {
+        padding-top: 1rem;
+        display: block;
+        transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    }
+}
