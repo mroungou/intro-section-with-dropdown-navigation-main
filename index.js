@@ -18,7 +18,10 @@ function expandItem() {
     } else if (featuresDiv.classList.contains('expanded')) { // expanded will collapse
         featuresDiv.classList.remove('expanded')
     }
+}
 
+function expandItem2() {
+    const companyDiv = document.getElementById('company-dropdown');
     if (!companyDiv.classList.contains('expanded')) { // collapsed will expand it
         companyDiv.classList.add('expanded')
     } else if (companyDiv.classList.contains('expanded')) { // expanded will collapse
@@ -29,19 +32,19 @@ function expandItem() {
 window.addEventListener('DOMContentLoaded', function() {
     const openButton = document.getElementById('menu');
     const closeButton = document.getElementById('close-button')
-    const dropDownItems = document.getElementsByClassName('fets')
+    // const dropDownItems = document.getElementsByClassName('fets')
 
-    const dropDownArray = Array.from(dropDownItems);
+    // const dropDownArray = Array.from(dropDownItems);
 
-    dropDownArray.forEach(function(item) {
-        item.addEventListener('click', expandItem)
-    });
+    // dropDownArray.forEach(function(item) {
+    //     item.addEventListener('click', expandItem)
+    // });
 
-    // const companyDiv = document.getElementById('company-dropdown')
-    // const featuresDiv = document.getElementById('features-dropdown')
+    const companyDiv = document.getElementById('company-dropdown')
+    const featuresDiv = document.getElementById('features-dropdown')
     
-    // companyDiv.addEventListener('click', expandItem)
-    // featuresDiv.addEventListener('click', expandItem)
+    companyDiv.addEventListener('click', expandItem2)
+    featuresDiv.addEventListener('click', expandItem)
 
     openButton.addEventListener('click', menuToggle)
     closeButton.addEventListener('click', menuToggle)

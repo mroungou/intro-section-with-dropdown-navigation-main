@@ -134,6 +134,7 @@ main .overlay {
 }
 .header .nav-bar .menu {
   margin-left: auto;
+  width: 20%;
 }
 
 .ad h1 {
@@ -159,7 +160,19 @@ main .overlay {
   color: hsl(0, 0%, 98%);
   font-size: 1rem;
 }
+.ad .learn-more a, .ad .learn-more a:visited {
+  color: hsl(0, 0%, 98%);
+  text-decoration: none;
+}
 
+@media screen and (min-width: 1440px) {
+  .desktop {
+    display: block !important;
+  }
+  .mobile {
+    display: none !important;
+  }
+}
 .icons {
   padding: 1rem 0.5rem 7rem 0.5rem;
   display: grid;

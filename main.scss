@@ -146,6 +146,7 @@ main {
         padding: 1rem;
         .menu {
             margin-left: auto;
+            width: 20%;
         }
     }
 }
@@ -173,6 +174,19 @@ main {
         text-align: center;
         color: $almostWhite;
         font-size: 1rem;
+        a, a:visited {
+            color: $almostWhite;
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .desktop {
+        display: block !important;
+    }
+    .mobile {
+        display: none !important;
     }
 }
 
