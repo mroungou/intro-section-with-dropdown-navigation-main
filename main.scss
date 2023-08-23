@@ -66,19 +66,16 @@ main {
     }
     .dropdown li{
         padding: 0.5rem 0;
+        list-style-type: none;
     }
     text-transform: capitalize;
-    #todo {
-        list-style-image: url(/images/icon-todo.svg);
-    }
-    #calendar {
-        list-style-image: url(/images/icon-calendar.svg);
-    }
-    #reminders {
-        list-style-image: url(/images/icon-reminders.svg);
-    }
-    #planning {
-        list-style-image: url(/images/icon-planning.svg);
+    .dropdown * {
+        display: flex;
+        img {
+            align-self: center;
+            padding: 0.5rem;
+            padding-bottom: 0.6rem;
+        }
     }
 }
 

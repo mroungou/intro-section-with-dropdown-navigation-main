@@ -56,18 +56,15 @@ main .overlay {
 }
 .features .dropdown li {
   padding: 0.5rem 0;
+  list-style-type: none;
 }
-.features #todo {
-  list-style-image: url(/images/icon-todo.svg);
+.features .dropdown * {
+  display: flex;
 }
-.features #calendar {
-  list-style-image: url(/images/icon-calendar.svg);
-}
-.features #reminders {
-  list-style-image: url(/images/icon-reminders.svg);
-}
-.features #planning {
-  list-style-image: url(/images/icon-planning.svg);
+.features .dropdown * img {
+  align-self: center;
+  padding: 0.5rem;
+  padding-bottom: 0.6rem;
 }
 
 .company .dropdown {
