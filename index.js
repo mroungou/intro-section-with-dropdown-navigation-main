@@ -29,6 +29,24 @@ function expandItem2() {
     }
 }
 
+function displayItem() {
+    const featuresDivDesktop = document.getElementById('features-desktop');
+    if (!featuresDivDesktop.classList.contains('expanded')) { // collapsed will expand it
+        featuresDivDesktop.classList.add('expanded')
+    } else if (featuresDivDesktop.classList.contains('expanded')) { // expanded will collapse
+        featuresDivDesktop.classList.remove('expanded')
+    }
+}
+
+function displayItem2() {
+    const companyDivDesktop = document.getElementById('company-desktop');
+    if (!companyDivDesktop.classList.contains('expanded')) { // collapsed will expand it
+        companyDivDesktop.classList.add('expanded')
+    } else if (companyDivDesktop.classList.contains('expanded')) { // expanded will collapse
+        companyDivDesktop.classList.remove('expanded')
+    }
+}
+
 window.addEventListener('DOMContentLoaded', function() {
     const openButton = document.getElementById('menu');
     const closeButton = document.getElementById('close-button')
@@ -45,6 +63,13 @@ window.addEventListener('DOMContentLoaded', function() {
     
     companyDiv.addEventListener('click', expandItem2)
     featuresDiv.addEventListener('click', expandItem)
+
+    const featuresDivDesktop = document.getElementById('features-desktop')
+    const companyDivDesktop = document.getElementById('company-desktop')
+
+    
+    featuresDivDesktop.addEventListener('click', displayItem)
+    companyDivDesktop.addEventListener('click', displayItem2)
 
     openButton.addEventListener('click', menuToggle)
     closeButton.addEventListener('click', menuToggle)

@@ -135,19 +135,19 @@ main {
     }
 }
 
+.nav-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    .menu {
+        margin-left: auto;
+        width: 20%;
+    }
+}
 
 .header {
     .mobile {
         width: 100%;
-    }
-    .nav-bar {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 1rem;
-        .menu {
-            margin-left: auto;
-            width: 20%;
-        }
     }
 }
 
@@ -182,11 +182,157 @@ main {
 }
 
 @media screen and (min-width: 1440px){
+    main {
+        padding: 1rem;
+    }
     .desktop {
         display: block !important;
     }
     .mobile {
         display: none !important;
+    }
+    .stuff {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "ad image";
+        .ad {
+            grid-area: ad;
+            padding: 9.5rem 2rem 1rem 9rem;
+            h1 {
+                font-size: 5rem;
+                text-align: left;
+                padding-bottom: 6rem;
+            }
+            p {
+                text-align: left;
+                padding: 0;
+                font-size: 1.25rem;
+                padding-bottom: 4rem;
+            }
+            .learn-more {
+                margin: 0;
+                padding: 1.25rem;
+                a {
+                    font-size: 1.5rem;
+                }
+            }
+            .learn-more:hover {
+                background-color: $almostWhite;
+                cursor: pointer;
+                border: 2px solid $almostBlack;
+                a {
+                    color: $almostBlack;
+                }
+            }
+            .icons {
+                margin-top: 9rem;
+                padding-bottom: 0;
+            }
+        }
+        .header {
+            padding: 6rem 4rem 0rem 4rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .nav-bar {
+        grid-template-columns: auto 1fr 1fr;
+        .navigation * {
+            display: inline-block;
+        }
+        .navigation {
+            padding: 0 4rem;
+            a, a:visited {
+                text-decoration: none;
+                color: $mediumGray;
+                font-size: 1.25rem;
+                padding-right: 1.5rem;
+                &:hover {
+                    cursor: pointer;
+                    color: $almostBlack;
+                }
+            }
+            .som {
+                color: $mediumGray;
+                font-size: 1.25rem;
+                padding-right: .5rem;
+                &:hover {
+                    cursor: pointer;
+                    color: $almostBlack;
+                }
+            }
+            .control {
+                padding-right: 1.5rem;
+                display: flex;
+                align-items: center;
+                a {
+                    padding-right: 0.5rem;
+                }
+            }
+        }
+        #arrow-up {
+            display: none;
+        }
+        @mixin items () {
+            display: none;
+            text-transform: capitalize;
+            position: absolute;
+            background-color: $almostWhite;
+            max-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropCon {
+            @include items();
+            left: 85px;
+            top: 70px;
+            padding: 1.5rem;
+            a {
+                padding-left: .75rem;
+            }
+            .todo, .calendar, .reminders, .planning {
+                padding-bottom: 1rem;
+                display: block;
+            }
+            .planning {
+                padding-bottom: 0;
+            }
+        }
+        .company-desktop {
+            .dropCon {
+                left: 315px;
+                top: 70px;
+                max-width: 95px;
+                a {
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+        .others {
+            margin-left: auto;
+            a, a:visited {
+                text-decoration: none;
+                color: $mediumGray;
+                font-size: 1.25rem;
+                padding-right: 1.5rem;
+                text-align: center;
+            }
+            li {
+                display: inline;
+                list-style: none;
+            }
+            #register {
+                padding: 1rem;
+                border: 2px solid $mediumGray;
+                border-radius: 12px;
+                a {
+                    padding-right: 0;
+                }
+            }
+        }
     }
 }
 
@@ -215,13 +361,13 @@ main {
     transition: 1s;
     #arrow-up {
         display: block;
-        transition: .5s;
+        // transition: .5s;
     }
     #arrow-down {
         display: none;
-        display: .5s;
+        // transition: .5s;
     }
-    .dropdown {
+    .dropdown, .dropCon {
         padding-top: 1rem;
         display: block;
         transition: max-height 0.5s ease-out, opacity 0.5s ease-out;

@@ -124,17 +124,18 @@ main .overlay {
   padding: 0.5rem;
 }
 
-.header .mobile {
-  width: 100%;
-}
-.header .nav-bar {
+.nav-bar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 1rem;
 }
-.header .nav-bar .menu {
+.nav-bar .menu {
   margin-left: auto;
   width: 20%;
+}
+
+.header .mobile {
+  width: 100%;
 }
 
 .ad h1 {
@@ -166,11 +167,152 @@ main .overlay {
 }
 
 @media screen and (min-width: 1440px) {
+  main {
+    padding: 1rem;
+  }
   .desktop {
     display: block !important;
   }
   .mobile {
     display: none !important;
+  }
+  .stuff {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "ad image";
+  }
+  .stuff .ad {
+    grid-area: ad;
+    padding: 9.5rem 2rem 1rem 9rem;
+  }
+  .stuff .ad h1 {
+    font-size: 5rem;
+    text-align: left;
+    padding-bottom: 6rem;
+  }
+  .stuff .ad p {
+    text-align: left;
+    padding: 0;
+    font-size: 1.25rem;
+    padding-bottom: 4rem;
+  }
+  .stuff .ad .learn-more {
+    margin: 0;
+    padding: 1.25rem;
+  }
+  .stuff .ad .learn-more a {
+    font-size: 1.5rem;
+  }
+  .stuff .ad .learn-more:hover {
+    background-color: hsl(0, 0%, 98%);
+    cursor: pointer;
+    border: 2px solid hsl(0, 0%, 8%);
+  }
+  .stuff .ad .learn-more:hover a {
+    color: hsl(0, 0%, 8%);
+  }
+  .stuff .ad .icons {
+    margin-top: 9rem;
+    padding-bottom: 0;
+  }
+  .stuff .header {
+    padding: 6rem 4rem 0rem 4rem;
+  }
+  .stuff .header img {
+    width: 100%;
+  }
+  .nav-bar {
+    grid-template-columns: auto 1fr 1fr;
+  }
+  .nav-bar .navigation * {
+    display: inline-block;
+  }
+  .nav-bar .navigation {
+    padding: 0 4rem;
+  }
+  .nav-bar .navigation a, .nav-bar .navigation a:visited {
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    font-size: 1.25rem;
+    padding-right: 1.5rem;
+  }
+  .nav-bar .navigation a:hover, .nav-bar .navigation a:visited:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 8%);
+  }
+  .nav-bar .navigation .som {
+    color: hsl(0, 0%, 41%);
+    font-size: 1.25rem;
+    padding-right: 0.5rem;
+  }
+  .nav-bar .navigation .som:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 8%);
+  }
+  .nav-bar .navigation .control {
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .nav-bar .navigation .control a {
+    padding-right: 0.5rem;
+  }
+  .nav-bar #arrow-up {
+    display: none;
+  }
+  .nav-bar .dropCon {
+    display: none;
+    text-transform: capitalize;
+    position: absolute;
+    background-color: hsl(0, 0%, 98%);
+    max-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: 85px;
+    top: 70px;
+    padding: 1.5rem;
+  }
+  .nav-bar .dropCon a {
+    padding-left: 0.75rem;
+  }
+  .nav-bar .dropCon .todo, .nav-bar .dropCon .calendar, .nav-bar .dropCon .reminders, .nav-bar .dropCon .planning {
+    padding-bottom: 1rem;
+    display: block;
+  }
+  .nav-bar .dropCon .planning {
+    padding-bottom: 0;
+  }
+  .nav-bar .company-desktop .dropCon {
+    left: 315px;
+    top: 70px;
+    max-width: 95px;
+  }
+  .nav-bar .company-desktop .dropCon a {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+  .nav-bar .others {
+    margin-left: auto;
+  }
+  .nav-bar .others a, .nav-bar .others a:visited {
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    font-size: 1.25rem;
+    padding-right: 1.5rem;
+    text-align: center;
+  }
+  .nav-bar .others li {
+    display: inline;
+    list-style: none;
+  }
+  .nav-bar .others #register {
+    padding: 1rem;
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 12px;
+  }
+  .nav-bar .others #register a {
+    padding-right: 0;
   }
 }
 .icons {
@@ -197,13 +339,11 @@ main .overlay {
 }
 .expanded #arrow-up {
   display: block;
-  transition: 0.5s;
 }
 .expanded #arrow-down {
   display: none;
-  display: 0.5s;
 }
-.expanded .dropdown {
+.expanded .dropdown, .expanded .dropCon {
   padding-top: 1rem;
   display: block;
   transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
